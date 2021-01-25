@@ -13,6 +13,30 @@ const config = {
   appId: '1:1021039400023:web:a8b292657bf7c9a3927f12',
 };
 
+export const createUserProfileDocument = async (userAuth, additionalData) => {
+  if (!userAuth) return;
+
+  const userRef = firestore.doc(`users/${userAuth.uid}`);
+  const snapShot = await userRef.get();
+
+  if (!snapShot.exists) {
+    const { displayName, email } = userAuth;
+    const createdAt = new Date();
+
+    try {
+      await userRef.set({
+        displayName,
+        email,
+        createdAt,
+        ...additionalData,
+      });
+    } catch (error) {
+      console.log('error creating user ', error.message);
+    }
+  }
+  return userRef;
+};
+
 firebase.initializeApp(config);
 //this below is what we are getting from the imported files of firebase and we want to export what we want to use in certain cases in other files
 export const auth = firebase.auth();
