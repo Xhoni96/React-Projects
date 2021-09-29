@@ -1,45 +1,21 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
-
+import { useState } from "react";
+import useStore from "./store/store";
 function App() {
-  const [count, setCount] = useState(0)
+  // if you use destructuring this component will re-render when everything in store updates. you should use the long syntax
+  const { bears, increasePopulation } = useStore();
+  console.log(process.env.NODE_ENV);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div className="grid place-content-center h-screen">
+      <div>{bears} bears around here</div>
+      <button
+        className="bg-green-500 p-2 rounded-sm text-white"
+        onClick={increasePopulation}
+      >
+        Add Bear
+      </button>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
