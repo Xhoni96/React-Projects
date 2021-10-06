@@ -2,10 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+// import "./i18n";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
+
 const queryClient = new QueryClient();
-import "./i18n";
 
 ReactDOM.render(
   <React.StrictMode>
