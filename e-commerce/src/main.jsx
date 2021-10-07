@@ -1,18 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
 // import "./i18n";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
+import App from "./App";
 
 const queryClient = new QueryClient();
 
+// remember to try Astro into this e-commerce
+
 ReactDOM.render(
+  // side note: React.StrictMode  makes components render twice. In case you're wondering 😁
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <App />
-      <ReactQueryDevtools initialIsOpen={false} />
+      <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
     </QueryClientProvider>
   </React.StrictMode>,
   document.getElementById("root")

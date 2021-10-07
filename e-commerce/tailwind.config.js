@@ -5,6 +5,13 @@ module.exports = {
     extend: {
       colors: {
         teal: "#14B8A6",
+        gray: {
+          blue: "#f5fbfd",
+        },
+        black: {
+          overlay: "rgba(0,0,0, 0.2)",
+        },
+        newsletter: "#fcf5f5",
       },
     },
   },

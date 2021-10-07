@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* in order to add new properties to tailwind that tailwind doesn't contain we use the utilities @layer */
+@layer utilities {
+  .scroll-snap-x {
+    scroll-snap-type: x mandatory;
+  }
+  .grid-cols-auto-fit {
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
