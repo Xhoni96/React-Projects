@@ -2,7 +2,7 @@ import { SearchCircleIcon, ShoppingCartIcon } from "@heroicons/react/outline";
 import Dropdown from "./Dropdown";
 
 const Navbar = () => (
-  <div className="bg-white p-2 pr-6 flex justify-between items-center">
+  <nav className="bg-white p-2 pr-6 flex justify-between items-center">
     <div className="flex-grow flex">
       <Dropdown />
       <div className="border w-max flex px-2 rounded-2xl flex-grow-0 items-center mx-3">
@@ -25,7 +25,7 @@ const Navbar = () => (
         </span>
       </div>
     </div>
-  </div>
+  </nav>
 );
 
 export default Navbar;
