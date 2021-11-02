@@ -1,5 +1,5 @@
 import { SearchCircleIcon, ShoppingCartIcon } from "@heroicons/react/outline";
-import Dropdown from "./Dropdown";
+import Dropdown from "./LanguageSelect";
 
 const Navbar = () => (
   <nav className="bg-white p-2 pr-6 flex justify-between items-center">

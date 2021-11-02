@@ -41,6 +41,9 @@ const Footer = () => (
         <MailIcon className="h-10 w-10" />
         <a href="mailto:you@somedomain.com">you@somedomain.com</a>
       </div>
+      <div>
+        <img src="https://i.ibb.co/Qfvn4z6/payment.png" alt="Payment logo" />
+      </div>
     </address>
   </footer>
 );

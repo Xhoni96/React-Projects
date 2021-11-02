@@ -9,7 +9,7 @@ const DETECTION_OPTIONS = {
 };
 
 const languages = {
-  en: { nativeName: "English" },
+  "en-US": { nativeName: "English" },
   it: { nativeName: "Italian" },
   al: { nativeName: "Albanian" },
 };

@@ -5,7 +5,15 @@ import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
 import i18n from "../i18n";
 
 const { languages } = i18n.options;
-const currLang = i18n.options.languages[i18n.language.split("-")[0]].nativeName;
+// const currLang = i18n.options.languages[i18n.language.split("-")[0]].nativeName;
+const currLang = i18n.options.languages[i18n.language].nativeName;
+
+// Possible ways to do it.👇
+
+// import { useTranslation } from 'react-i18next';
+// const { t, i18n } = useTranslation();
+// i18n.changeLanguage(lng);
+
 const Dropdown = () => {
   const [selectedLang, setSelected] = useState(currLang);
 
@@ -68,38 +76,5 @@ const Dropdown = () => {
     </div>
   );
 };
-// const Dropdown = () => (
-//   <Menu>
-//     <Menu.Button>
-//       {languages[i18n.language.split("-")[0]].nativeName}
-//     </Menu.Button>
-//     <Menu.Items>
-//       {Object.keys(languages).map((lng) => (
-//         <Menu.Item key={lng}>
-//           {({ active }) => (
-//             <button
-//               className={`${active && "bg-blue-500"}`}
-//               href="/account-settings"
-//             >
-//               {languages[lng].nativeName}
-//             </button>
-//           )}
-//         </Menu.Item>
-//       ))}
-
-//       {/* </Menu.Item>
-//       <Menu.Item>
-//         {({ active }) => (
-//           <a className={`${active && "bg-blue-500"}`} href="/account-settings">
-//             Documentation
-//           </a>
-//         )}
-//       </Menu.Item>
-//       <Menu.Item disabled>
-//         <span className="opacity-75">Invite a friend (coming soon!)</span>
-//       </Menu.Item> */}
-//     </Menu.Items>
-//   </Menu>
-// );
 
 export default Dropdown;

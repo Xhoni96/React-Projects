@@ -1,4 +1,4 @@
-import useStore from "../store/store";
+import useStore from "../../store/store";
 
 const ZustandExample = () => {
   // if you use destructuring this component will re-render when everything in store updates. you should use the long syntax

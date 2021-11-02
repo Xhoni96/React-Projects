@@ -1,7 +1,9 @@
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
+import ProductList from "./components/ProductList";
 
 function App() {
-  return <Home />;
+  // Handle Routes later
+  return <ProductList />;
 }
 
 export default App;

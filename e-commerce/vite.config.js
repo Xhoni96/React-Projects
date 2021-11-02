@@ -7,6 +7,12 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  // This is the way to define global variables in Vite
+  // define: {
+  //   global: 'window',
+  //   NODE_ENV: process.env.NODE_ENV,
+  // },
+
   // resolve: {
   //   alias: [
   //     {
@@ -16,7 +22,7 @@ export default defineConfig({
   //   ]
   // },
   server: {
-    open: "/index.html",
+    open: "./index.html",
     host: true,
     // proxy:   try it
   },

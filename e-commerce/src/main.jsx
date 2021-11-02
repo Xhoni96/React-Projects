@@ -10,6 +10,8 @@ const queryClient = new QueryClient();
 
 // remember to try Astro into this e-commerce
 
+// also content-vissibilty css property
+
 ReactDOM.render(
   // side note: React.StrictMode  makes components render twice. In case you're wondering 😁
   <React.StrictMode>
