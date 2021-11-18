@@ -22,7 +22,7 @@ export default defineConfig({
   //   ]
   // },
   server: {
-    open: "./index.html",
+    open: "/",
     host: true,
     // proxy:   try it
   },

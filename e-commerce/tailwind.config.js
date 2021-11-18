@@ -1,6 +1,6 @@
 module.exports = {
-  purge: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  // darkMode: false, // 'media' => enable dark mode if user operating system dark mode is enabled or 'class' to add it manually
   theme: {
     extend: {
       colors: {
